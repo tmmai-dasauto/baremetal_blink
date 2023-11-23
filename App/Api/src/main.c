@@ -30,7 +30,7 @@ static inline void gpio_set_mode(uint16_t pin, uint8_t mode) {
   gpio->MODER |= (mode & 3U) << (n * 2);   // Set new mode
 }
 
-static inline void gpio_write(uint16_t pin, bool val) {
+static inline void gpio_write(uint16_t pin, uint8_t val) {
   struct gpio *gpio = GPIO(PINBANK(pin));
   gpio->BSRR = (1U << PINNO(pin)) << (val ? 0 : 16);
 }
@@ -40,18 +40,20 @@ static inline void spin(volatile uint32_t count) {
 }
 
 int main(void) {
+  
   uint16_t led = PIN('C', 13);            // Blue LED
   //uint16_t led = PIN('A', 13);            // Dumb board
   RCC->AHB1ENR |= BIT(PINBANK(led));     // Enable GPIO clock for LED
   gpio_set_mode(led, GPIO_MODE_OUTPUT);  // Set blue LED to output mode
-  gpio_write(led,0);
-  spin(999999);    
-  for (;;) {
-    gpio_write(led,1);
-    spin(500);
-    gpio_write(led,0);
-    spin(5000);    
+  
+  for (;;)
+  {
+  gpio_write(led,1);
+  spin(999999);
+  * (uint32_t *) (0x40020800 + 0x18) = 0x20000000;
+  spin(999999);
   }
+  
   return 0;
 }
 
