@@ -1,0 +1,3 @@
+C:/Working/baremetal_stm/Build/CMakeFiles/Blink.out.dir
+C:/Working/baremetal_stm/Build/CMakeFiles/edit_cache.dir
+C:/Working/baremetal_stm/Build/CMakeFiles/rebuild_cache.dir

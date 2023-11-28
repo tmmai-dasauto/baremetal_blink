@@ -36,7 +36,7 @@ static inline void gpio_write(uint16_t pin, uint8_t val) {
 }
 
 static inline void spin(volatile uint32_t count) {
-  while (count--) asm("nop");
+  while (count--) /*asm("nop")*/;
 }
 
 int main(void) {
