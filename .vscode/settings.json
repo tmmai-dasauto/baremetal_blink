@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "enum.h": "c",
+        "blink.h": "c",
+        "gpio.h": "c",
+        "macro.h": "c",
+        "inttypes.h": "c",
+        "userdefine.h": "c",
+        "stdbool.h": "c"
+    }
+}

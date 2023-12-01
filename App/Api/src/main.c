@@ -1,57 +1,18 @@
-#include <inttypes.h>
-#include <stdbool.h>
+#include "main.h"
 
-#define BIT(x) (1UL << (x))
-#define PIN(bank, num) ((((bank) - 'A') << 8) | (num))
-#define PINNO(pin) (pin & 255)
-#define PINBANK(pin) (pin >> 8)
-
-struct rcc {
-  volatile uint32_t CR, PLLCFGR, CFGR, CIR, AHB1RSTR, AHB2RSTR, AHB3RSTR,
-      RESERVED0, APB1RSTR, APB2RSTR, RESERVED1[2], AHB1ENR, AHB2ENR, AHB3ENR,
-      RESERVED2, APB1ENR, APB2ENR, RESERVED3[2], AHB1LPENR, AHB2LPENR,
-      AHB3LPENR, RESERVED4, APB1LPENR, APB2LPENR, RESERVED5[2], BDCR, CSR,
-      RESERVED6[2], SSCGR, PLLI2SCFGR;
-};
-#define RCC ((struct rcc *) 0x40023800)
-
-struct gpio {
-  volatile uint32_t MODER, OTYPER, OSPEEDR, PUPDR, IDR, ODR, BSRR, LCKR, AFR[2];
-};
-#define GPIO(bank) ((struct gpio *) (0x40020000 + 0x400 * (bank)))
-
-// Enum values are per datasheet: 0, 1, 2, 3
-enum { GPIO_MODE_INPUT, GPIO_MODE_OUTPUT, GPIO_MODE_AF, GPIO_MODE_ANALOG };
-
-static inline void gpio_set_mode(uint16_t pin, uint8_t mode) {
-  struct gpio *gpio = GPIO(PINBANK(pin));  // GPIO bank
-  int n = PINNO(pin);                      // Pin number
-  gpio->MODER &= ~(3U << (n * 2));         // Clear existing setting
-  gpio->MODER |= (mode & 3U) << (n * 2);   // Set new mode
-}
-
-static inline void gpio_write(uint16_t pin, uint8_t val) {
-  struct gpio *gpio = GPIO(PINBANK(pin));
-  gpio->BSRR = (1U << PINNO(pin)) << (val ? 0 : 16);
-}
+uint8_t g_InitStatus = 0;
 
 static inline void spin(volatile uint32_t count) {
   while (count--) /*asm("nop")*/;
 }
 
 int main(void) {
-  
-  uint16_t led = PIN('C', 13);            // Blue LED
-  //uint16_t led = PIN('A', 13);            // Dumb board
-  RCC->AHB1ENR |= BIT(PINBANK(led));     // Enable GPIO clock for LED
-  gpio_set_mode(led, GPIO_MODE_OUTPUT);  // Set blue LED to output mode
-  
+  uint16_t led = PIN('C', 13);            // Blue LED  
+
+  SetupPin(led,GPIO_MODE_OUTPUT);
   for (;;)
   {
-  gpio_write(led,1);
-  spin(999999);
-  * (uint32_t *) (0x40020800 + 0x18) = 0x20000000;
-  spin(999999);
+    BlinkLed(led);
   }
   
   return 0;

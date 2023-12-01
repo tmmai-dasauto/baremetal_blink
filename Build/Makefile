@@ -116,24 +116,63 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Blink.out
+# Target rules for targets named Blink.elf
 
 # Build rule for target.
-Blink.out: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Blink.out
-.PHONY : Blink.out
+Blink.elf: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Blink.elf
+.PHONY : Blink.elf
 
 # fast build rule for target.
-Blink.out/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.out.dir\build.make CMakeFiles/Blink.out.dir/build
-.PHONY : Blink.out/fast
+Blink.elf/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/build
+.PHONY : Blink.elf/fast
+
+#=============================================================================
+# Target rules for targets named Blink_Trigger
+
+# Build rule for target.
+Blink_Trigger: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Blink_Trigger
+.PHONY : Blink_Trigger
+
+# fast build rule for target.
+Blink_Trigger/fast:
+	$(MAKE) $(MAKESILENT) -f Blink_Trigger\CMakeFiles\Blink_Trigger.dir\build.make Blink_Trigger/CMakeFiles/Blink_Trigger.dir/build
+.PHONY : Blink_Trigger/fast
+
+#=============================================================================
+# Target rules for targets named GPIO_Setting
+
+# Build rule for target.
+GPIO_Setting: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 GPIO_Setting
+.PHONY : GPIO_Setting
+
+# fast build rule for target.
+GPIO_Setting/fast:
+	$(MAKE) $(MAKESILENT) -f GPIO_Setting\CMakeFiles\GPIO_Setting.dir\build.make GPIO_Setting/CMakeFiles/GPIO_Setting.dir/build
+.PHONY : GPIO_Setting/fast
+
+#=============================================================================
+# Target rules for targets named RCC_Setting
+
+# Build rule for target.
+RCC_Setting: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 RCC_Setting
+.PHONY : RCC_Setting
+
+# fast build rule for target.
+RCC_Setting/fast:
+	$(MAKE) $(MAKESILENT) -f RCC_Setting\CMakeFiles\RCC_Setting.dir\build.make RCC_Setting/CMakeFiles/RCC_Setting.dir/build
+.PHONY : RCC_Setting/fast
 
 App/Api/src/main.obj: App/Api/src/main.c.obj
 .PHONY : App/Api/src/main.obj
 
 # target to build an object file
 App/Api/src/main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.out.dir\build.make CMakeFiles/Blink.out.dir/App/Api/src/main.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
 .PHONY : App/Api/src/main.c.obj
 
 App/Api/src/main.i: App/Api/src/main.c.i
@@ -141,7 +180,7 @@ App/Api/src/main.i: App/Api/src/main.c.i
 
 # target to preprocess a source file
 App/Api/src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.out.dir\build.make CMakeFiles/Blink.out.dir/App/Api/src/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/App/Api/src/main.c.i
 .PHONY : App/Api/src/main.c.i
 
 App/Api/src/main.s: App/Api/src/main.c.s
@@ -149,8 +188,80 @@ App/Api/src/main.s: App/Api/src/main.c.s
 
 # target to generate assembly for a file
 App/Api/src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.out.dir\build.make CMakeFiles/Blink.out.dir/App/Api/src/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/App/Api/src/main.c.s
 .PHONY : App/Api/src/main.c.s
+
+App/Wrapper/src/Blink.obj: App/Wrapper/src/Blink.c.obj
+.PHONY : App/Wrapper/src/Blink.obj
+
+# target to build an object file
+App/Wrapper/src/Blink.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
+.PHONY : App/Wrapper/src/Blink.c.obj
+
+App/Wrapper/src/Blink.i: App/Wrapper/src/Blink.c.i
+.PHONY : App/Wrapper/src/Blink.i
+
+# target to preprocess a source file
+App/Wrapper/src/Blink.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.i
+.PHONY : App/Wrapper/src/Blink.c.i
+
+App/Wrapper/src/Blink.s: App/Wrapper/src/Blink.c.s
+.PHONY : App/Wrapper/src/Blink.s
+
+# target to generate assembly for a file
+App/Wrapper/src/Blink.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.s
+.PHONY : App/Wrapper/src/Blink.c.s
+
+Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.obj: Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
+.PHONY : Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.obj
+
+# target to build an object file
+Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
+.PHONY : Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
+
+Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.i: Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.i
+.PHONY : Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.i
+
+# target to preprocess a source file
+Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.i
+.PHONY : Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.i
+
+Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.s: Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.s
+.PHONY : Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.s
+
+# target to generate assembly for a file
+Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.s
+.PHONY : Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.s
+
+Support/Device/stm32f411/Driver/RCC/src/RCC.obj: Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
+.PHONY : Support/Device/stm32f411/Driver/RCC/src/RCC.obj
+
+# target to build an object file
+Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
+.PHONY : Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
+
+Support/Device/stm32f411/Driver/RCC/src/RCC.i: Support/Device/stm32f411/Driver/RCC/src/RCC.c.i
+.PHONY : Support/Device/stm32f411/Driver/RCC/src/RCC.i
+
+# target to preprocess a source file
+Support/Device/stm32f411/Driver/RCC/src/RCC.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.i
+.PHONY : Support/Device/stm32f411/Driver/RCC/src/RCC.c.i
+
+Support/Device/stm32f411/Driver/RCC/src/RCC.s: Support/Device/stm32f411/Driver/RCC/src/RCC.c.s
+.PHONY : Support/Device/stm32f411/Driver/RCC/src/RCC.s
+
+# target to generate assembly for a file
+Support/Device/stm32f411/Driver/RCC/src/RCC.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.s
+.PHONY : Support/Device/stm32f411/Driver/RCC/src/RCC.c.s
 
 # Help Target
 help:
@@ -160,10 +271,22 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... Blink.out
+	@echo ... Blink.elf
+	@echo ... Blink_Trigger
+	@echo ... GPIO_Setting
+	@echo ... RCC_Setting
 	@echo ... App/Api/src/main.obj
 	@echo ... App/Api/src/main.i
 	@echo ... App/Api/src/main.s
+	@echo ... App/Wrapper/src/Blink.obj
+	@echo ... App/Wrapper/src/Blink.i
+	@echo ... App/Wrapper/src/Blink.s
+	@echo ... Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.obj
+	@echo ... Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.i
+	@echo ... Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.s
+	@echo ... Support/Device/stm32f411/Driver/RCC/src/RCC.obj
+	@echo ... Support/Device/stm32f411/Driver/RCC/src/RCC.i
+	@echo ... Support/Device/stm32f411/Driver/RCC/src/RCC.s
 .PHONY : help
 
 
