@@ -82,24 +82,52 @@ CMakeFiles/Blink.elf.dir/App/Api/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Blink.elf.dir/App/Api/src/main.c.s"
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Working\baremetal_stm\App\Api\src\main.c -o CMakeFiles\Blink.elf.dir\App\Api\src\main.c.s
 
-CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj: CMakeFiles/Blink.elf.dir/flags.make
-CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj: C:/Working/baremetal_stm/App/Wrapper/src/Blink.c
-CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj: CMakeFiles/Blink.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Working\baremetal_stm\Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj"
-	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj -MF CMakeFiles\Blink.elf.dir\App\Wrapper\src\Blink.c.obj.d -o CMakeFiles\Blink.elf.dir\App\Wrapper\src\Blink.c.obj -c C:\Working\baremetal_stm\App\Wrapper\src\Blink.c
+CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj: CMakeFiles/Blink.elf.dir/flags.make
+CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj: C:/Working/baremetal_stm/App/Api/src/App_LED.c
+CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj: CMakeFiles/Blink.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Working\baremetal_stm\Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj"
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj -MF CMakeFiles\Blink.elf.dir\App\Api\src\App_LED.c.obj.d -o CMakeFiles\Blink.elf.dir\App\Api\src\App_LED.c.obj -c C:\Working\baremetal_stm\App\Api\src\App_LED.c
 
-CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.i"
-	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Working\baremetal_stm\App\Wrapper\src\Blink.c > CMakeFiles\Blink.elf.dir\App\Wrapper\src\Blink.c.i
+CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.i"
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Working\baremetal_stm\App\Api\src\App_LED.c > CMakeFiles\Blink.elf.dir\App\Api\src\App_LED.c.i
 
-CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.s"
-	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Working\baremetal_stm\App\Wrapper\src\Blink.c -o CMakeFiles\Blink.elf.dir\App\Wrapper\src\Blink.c.s
+CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.s"
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Working\baremetal_stm\App\Api\src\App_LED.c -o CMakeFiles\Blink.elf.dir\App\Api\src\App_LED.c.s
+
+CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj: CMakeFiles/Blink.elf.dir/flags.make
+CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj: C:/Working/baremetal_stm/App/Wrapper/src/Setup.c
+CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj: CMakeFiles/Blink.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Working\baremetal_stm\Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj"
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj -MF CMakeFiles\Blink.elf.dir\App\Wrapper\src\Setup.c.obj.d -o CMakeFiles\Blink.elf.dir\App\Wrapper\src\Setup.c.obj -c C:\Working\baremetal_stm\App\Wrapper\src\Setup.c
+
+CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.i"
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Working\baremetal_stm\App\Wrapper\src\Setup.c > CMakeFiles\Blink.elf.dir\App\Wrapper\src\Setup.c.i
+
+CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.s"
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Working\baremetal_stm\App\Wrapper\src\Setup.c -o CMakeFiles\Blink.elf.dir\App\Wrapper\src\Setup.c.s
+
+CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj: CMakeFiles/Blink.elf.dir/flags.make
+CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj: C:/Working/baremetal_stm/Firmware/Timer/src/Timer.c
+CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj: CMakeFiles/Blink.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Working\baremetal_stm\Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj"
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj -MF CMakeFiles\Blink.elf.dir\Firmware\Timer\src\Timer.c.obj.d -o CMakeFiles\Blink.elf.dir\Firmware\Timer\src\Timer.c.obj -c C:\Working\baremetal_stm\Firmware\Timer\src\Timer.c
+
+CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.i"
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Working\baremetal_stm\Firmware\Timer\src\Timer.c > CMakeFiles\Blink.elf.dir\Firmware\Timer\src\Timer.c.i
+
+CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.s"
+	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Working\baremetal_stm\Firmware\Timer\src\Timer.c -o CMakeFiles\Blink.elf.dir\Firmware\Timer\src\Timer.c.s
 
 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj: CMakeFiles/Blink.elf.dir/flags.make
 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj: C:/Working/baremetal_stm/Support/Device/stm32f411/Driver/RCC/src/RCC.c
 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj: CMakeFiles/Blink.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Working\baremetal_stm\Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Working\baremetal_stm\Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj"
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj -MF CMakeFiles\Blink.elf.dir\Support\Device\stm32f411\Driver\RCC\src\RCC.c.obj.d -o CMakeFiles\Blink.elf.dir\Support\Device\stm32f411\Driver\RCC\src\RCC.c.obj -c C:\Working\baremetal_stm\Support\Device\stm32f411\Driver\RCC\src\RCC.c
 
 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.i: cmake_force
@@ -113,7 +141,7 @@ CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.s: cmake_
 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj: CMakeFiles/Blink.elf.dir/flags.make
 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj: C:/Working/baremetal_stm/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c
 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj: CMakeFiles/Blink.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Working\baremetal_stm\Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Working\baremetal_stm\Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj"
 	C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj -MF CMakeFiles\Blink.elf.dir\Support\Device\stm32f411\Driver\GPIO\src\GPIO_Func.c.obj.d -o CMakeFiles\Blink.elf.dir\Support\Device\stm32f411\Driver\GPIO\src\GPIO_Func.c.obj -c C:\Working\baremetal_stm\Support\Device\stm32f411\Driver\GPIO\src\GPIO_Func.c
 
 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.i: cmake_force
@@ -127,7 +155,9 @@ CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.s:
 # Object files for target Blink.elf
 Blink_elf_OBJECTS = \
 "CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj" \
-"CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj" \
+"CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj" \
+"CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj" \
+"CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj" \
 "CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj" \
 "CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj"
 
@@ -135,15 +165,18 @@ Blink_elf_OBJECTS = \
 Blink_elf_EXTERNAL_OBJECTS =
 
 Blink.elf: CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
-Blink.elf: CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
+Blink.elf: CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+Blink.elf: CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
+Blink.elf: CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj
 Blink.elf: CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
 Blink.elf: CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
 Blink.elf: CMakeFiles/Blink.elf.dir/build.make
-Blink.elf: Blink_Trigger/libBlink_Trigger.a
+Blink.elf: Setup/libSetup.a
+Blink.elf: Timer/libTimer.a
 Blink.elf: GPIO_Setting/libGPIO_Setting.a
 Blink.elf: RCC_Setting/libRCC_Setting.a
 Blink.elf: CMakeFiles/Blink.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Working\baremetal_stm\Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable Blink.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Working\baremetal_stm\Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable Blink.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Blink.elf.dir\link.txt --verbose=$(VERBOSE)
 	arm-none-eabi-size Blink.elf
 	arm-none-eabi-objcopy -O ihex Blink.elf Blink.hex

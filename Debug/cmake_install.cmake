@@ -39,7 +39,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Working/baremetal_stm/Debug/Blink_Trigger/cmake_install.cmake")
+  include("C:/Working/baremetal_stm/Debug/Setup/cmake_install.cmake")
+  include("C:/Working/baremetal_stm/Debug/Timer/cmake_install.cmake")
   include("C:/Working/baremetal_stm/Debug/GPIO_Setting/cmake_install.cmake")
   include("C:/Working/baremetal_stm/Debug/RCC_Setting/cmake_install.cmake")
 

@@ -129,17 +129,30 @@ Blink.elf/fast:
 .PHONY : Blink.elf/fast
 
 #=============================================================================
-# Target rules for targets named Blink_Trigger
+# Target rules for targets named Setup
 
 # Build rule for target.
-Blink_Trigger: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Blink_Trigger
-.PHONY : Blink_Trigger
+Setup: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Setup
+.PHONY : Setup
 
 # fast build rule for target.
-Blink_Trigger/fast:
-	$(MAKE) $(MAKESILENT) -f Blink_Trigger\CMakeFiles\Blink_Trigger.dir\build.make Blink_Trigger/CMakeFiles/Blink_Trigger.dir/build
-.PHONY : Blink_Trigger/fast
+Setup/fast:
+	$(MAKE) $(MAKESILENT) -f Setup\CMakeFiles\Setup.dir\build.make Setup/CMakeFiles/Setup.dir/build
+.PHONY : Setup/fast
+
+#=============================================================================
+# Target rules for targets named Timer
+
+# Build rule for target.
+Timer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Timer
+.PHONY : Timer
+
+# fast build rule for target.
+Timer/fast:
+	$(MAKE) $(MAKESILENT) -f Timer\CMakeFiles\Timer.dir\build.make Timer/CMakeFiles/Timer.dir/build
+.PHONY : Timer/fast
 
 #=============================================================================
 # Target rules for targets named GPIO_Setting
@@ -167,6 +180,30 @@ RCC_Setting/fast:
 	$(MAKE) $(MAKESILENT) -f RCC_Setting\CMakeFiles\RCC_Setting.dir\build.make RCC_Setting/CMakeFiles/RCC_Setting.dir/build
 .PHONY : RCC_Setting/fast
 
+App/Api/src/App_LED.obj: App/Api/src/App_LED.c.obj
+.PHONY : App/Api/src/App_LED.obj
+
+# target to build an object file
+App/Api/src/App_LED.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+.PHONY : App/Api/src/App_LED.c.obj
+
+App/Api/src/App_LED.i: App/Api/src/App_LED.c.i
+.PHONY : App/Api/src/App_LED.i
+
+# target to preprocess a source file
+App/Api/src/App_LED.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.i
+.PHONY : App/Api/src/App_LED.c.i
+
+App/Api/src/App_LED.s: App/Api/src/App_LED.c.s
+.PHONY : App/Api/src/App_LED.s
+
+# target to generate assembly for a file
+App/Api/src/App_LED.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.s
+.PHONY : App/Api/src/App_LED.c.s
+
 App/Api/src/main.obj: App/Api/src/main.c.obj
 .PHONY : App/Api/src/main.obj
 
@@ -191,29 +228,53 @@ App/Api/src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/App/Api/src/main.c.s
 .PHONY : App/Api/src/main.c.s
 
-App/Wrapper/src/Blink.obj: App/Wrapper/src/Blink.c.obj
-.PHONY : App/Wrapper/src/Blink.obj
+App/Wrapper/src/Setup.obj: App/Wrapper/src/Setup.c.obj
+.PHONY : App/Wrapper/src/Setup.obj
 
 # target to build an object file
-App/Wrapper/src/Blink.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
-.PHONY : App/Wrapper/src/Blink.c.obj
+App/Wrapper/src/Setup.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
+.PHONY : App/Wrapper/src/Setup.c.obj
 
-App/Wrapper/src/Blink.i: App/Wrapper/src/Blink.c.i
-.PHONY : App/Wrapper/src/Blink.i
+App/Wrapper/src/Setup.i: App/Wrapper/src/Setup.c.i
+.PHONY : App/Wrapper/src/Setup.i
 
 # target to preprocess a source file
-App/Wrapper/src/Blink.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.i
-.PHONY : App/Wrapper/src/Blink.c.i
+App/Wrapper/src/Setup.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.i
+.PHONY : App/Wrapper/src/Setup.c.i
 
-App/Wrapper/src/Blink.s: App/Wrapper/src/Blink.c.s
-.PHONY : App/Wrapper/src/Blink.s
+App/Wrapper/src/Setup.s: App/Wrapper/src/Setup.c.s
+.PHONY : App/Wrapper/src/Setup.s
 
 # target to generate assembly for a file
-App/Wrapper/src/Blink.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.s
-.PHONY : App/Wrapper/src/Blink.c.s
+App/Wrapper/src/Setup.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.s
+.PHONY : App/Wrapper/src/Setup.c.s
+
+Firmware/Timer/src/Timer.obj: Firmware/Timer/src/Timer.c.obj
+.PHONY : Firmware/Timer/src/Timer.obj
+
+# target to build an object file
+Firmware/Timer/src/Timer.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj
+.PHONY : Firmware/Timer/src/Timer.c.obj
+
+Firmware/Timer/src/Timer.i: Firmware/Timer/src/Timer.c.i
+.PHONY : Firmware/Timer/src/Timer.i
+
+# target to preprocess a source file
+Firmware/Timer/src/Timer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.i
+.PHONY : Firmware/Timer/src/Timer.c.i
+
+Firmware/Timer/src/Timer.s: Firmware/Timer/src/Timer.c.s
+.PHONY : Firmware/Timer/src/Timer.s
+
+# target to generate assembly for a file
+Firmware/Timer/src/Timer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.s
+.PHONY : Firmware/Timer/src/Timer.c.s
 
 Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.obj: Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
 .PHONY : Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.obj
@@ -272,15 +333,22 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Blink.elf
-	@echo ... Blink_Trigger
 	@echo ... GPIO_Setting
 	@echo ... RCC_Setting
+	@echo ... Setup
+	@echo ... Timer
+	@echo ... App/Api/src/App_LED.obj
+	@echo ... App/Api/src/App_LED.i
+	@echo ... App/Api/src/App_LED.s
 	@echo ... App/Api/src/main.obj
 	@echo ... App/Api/src/main.i
 	@echo ... App/Api/src/main.s
-	@echo ... App/Wrapper/src/Blink.obj
-	@echo ... App/Wrapper/src/Blink.i
-	@echo ... App/Wrapper/src/Blink.s
+	@echo ... App/Wrapper/src/Setup.obj
+	@echo ... App/Wrapper/src/Setup.i
+	@echo ... App/Wrapper/src/Setup.s
+	@echo ... Firmware/Timer/src/Timer.obj
+	@echo ... Firmware/Timer/src/Timer.i
+	@echo ... Firmware/Timer/src/Timer.s
 	@echo ... Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.obj
 	@echo ... Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.i
 	@echo ... Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.s

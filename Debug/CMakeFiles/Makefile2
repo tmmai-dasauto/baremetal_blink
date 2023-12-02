@@ -63,38 +63,26 @@ CMAKE_BINARY_DIR = C:\Working\baremetal_stm\Debug
 
 # The main recursive "all" target.
 all: CMakeFiles/Blink.elf.dir/all
-all: Blink_Trigger/all
+all: Setup/all
+all: Timer/all
 all: GPIO_Setting/all
 all: RCC_Setting/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: Blink_Trigger/preinstall
+preinstall: Setup/preinstall
+preinstall: Timer/preinstall
 preinstall: GPIO_Setting/preinstall
 preinstall: RCC_Setting/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/Blink.elf.dir/clean
-clean: Blink_Trigger/clean
+clean: Setup/clean
+clean: Timer/clean
 clean: GPIO_Setting/clean
 clean: RCC_Setting/clean
 .PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory Blink_Trigger
-
-# Recursive "all" directory target.
-Blink_Trigger/all: Blink_Trigger/CMakeFiles/Blink_Trigger.dir/all
-.PHONY : Blink_Trigger/all
-
-# Recursive "preinstall" directory target.
-Blink_Trigger/preinstall:
-.PHONY : Blink_Trigger/preinstall
-
-# Recursive "clean" directory target.
-Blink_Trigger/clean: Blink_Trigger/CMakeFiles/Blink_Trigger.dir/clean
-.PHONY : Blink_Trigger/clean
 
 #=============================================================================
 # Directory level rules for directory GPIO_Setting
@@ -127,20 +115,51 @@ RCC_Setting/clean: RCC_Setting/CMakeFiles/RCC_Setting.dir/clean
 .PHONY : RCC_Setting/clean
 
 #=============================================================================
+# Directory level rules for directory Setup
+
+# Recursive "all" directory target.
+Setup/all: Setup/CMakeFiles/Setup.dir/all
+.PHONY : Setup/all
+
+# Recursive "preinstall" directory target.
+Setup/preinstall:
+.PHONY : Setup/preinstall
+
+# Recursive "clean" directory target.
+Setup/clean: Setup/CMakeFiles/Setup.dir/clean
+.PHONY : Setup/clean
+
+#=============================================================================
+# Directory level rules for directory Timer
+
+# Recursive "all" directory target.
+Timer/all: Timer/CMakeFiles/Timer.dir/all
+.PHONY : Timer/all
+
+# Recursive "preinstall" directory target.
+Timer/preinstall:
+.PHONY : Timer/preinstall
+
+# Recursive "clean" directory target.
+Timer/clean: Timer/CMakeFiles/Timer.dir/clean
+.PHONY : Timer/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/Blink.elf.dir
 
 # All Build rule for target.
-CMakeFiles/Blink.elf.dir/all: Blink_Trigger/CMakeFiles/Blink_Trigger.dir/all
+CMakeFiles/Blink.elf.dir/all: Setup/CMakeFiles/Setup.dir/all
+CMakeFiles/Blink.elf.dir/all: Timer/CMakeFiles/Timer.dir/all
 CMakeFiles/Blink.elf.dir/all: GPIO_Setting/CMakeFiles/GPIO_Setting.dir/all
 CMakeFiles/Blink.elf.dir/all: RCC_Setting/CMakeFiles/RCC_Setting.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Blink.elf.dir\build.make CMakeFiles/Blink.elf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Working\baremetal_stm\Debug\CMakeFiles --progress-num=1,2,3,4,5 "Built target Blink.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Working\baremetal_stm\Debug\CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target Blink.elf"
 .PHONY : CMakeFiles/Blink.elf.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Blink.elf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Working\baremetal_stm\Debug\CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Working\baremetal_stm\Debug\CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Blink.elf.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Working\baremetal_stm\Debug\CMakeFiles 0
 .PHONY : CMakeFiles/Blink.elf.dir/rule
@@ -155,30 +174,56 @@ CMakeFiles/Blink.elf.dir/clean:
 .PHONY : CMakeFiles/Blink.elf.dir/clean
 
 #=============================================================================
-# Target rules for target Blink_Trigger/CMakeFiles/Blink_Trigger.dir
+# Target rules for target Setup/CMakeFiles/Setup.dir
 
 # All Build rule for target.
-Blink_Trigger/CMakeFiles/Blink_Trigger.dir/all:
-	$(MAKE) $(MAKESILENT) -f Blink_Trigger\CMakeFiles\Blink_Trigger.dir\build.make Blink_Trigger/CMakeFiles/Blink_Trigger.dir/depend
-	$(MAKE) $(MAKESILENT) -f Blink_Trigger\CMakeFiles\Blink_Trigger.dir\build.make Blink_Trigger/CMakeFiles/Blink_Trigger.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Working\baremetal_stm\Debug\CMakeFiles --progress-num=6,7 "Built target Blink_Trigger"
-.PHONY : Blink_Trigger/CMakeFiles/Blink_Trigger.dir/all
+Setup/CMakeFiles/Setup.dir/all:
+	$(MAKE) $(MAKESILENT) -f Setup\CMakeFiles\Setup.dir\build.make Setup/CMakeFiles/Setup.dir/depend
+	$(MAKE) $(MAKESILENT) -f Setup\CMakeFiles\Setup.dir\build.make Setup/CMakeFiles/Setup.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Working\baremetal_stm\Debug\CMakeFiles --progress-num=12,13 "Built target Setup"
+.PHONY : Setup/CMakeFiles/Setup.dir/all
 
 # Build rule for subdir invocation for target.
-Blink_Trigger/CMakeFiles/Blink_Trigger.dir/rule: cmake_check_build_system
+Setup/CMakeFiles/Setup.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Working\baremetal_stm\Debug\CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Blink_Trigger/CMakeFiles/Blink_Trigger.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Setup/CMakeFiles/Setup.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Working\baremetal_stm\Debug\CMakeFiles 0
-.PHONY : Blink_Trigger/CMakeFiles/Blink_Trigger.dir/rule
+.PHONY : Setup/CMakeFiles/Setup.dir/rule
 
 # Convenience name for target.
-Blink_Trigger: Blink_Trigger/CMakeFiles/Blink_Trigger.dir/rule
-.PHONY : Blink_Trigger
+Setup: Setup/CMakeFiles/Setup.dir/rule
+.PHONY : Setup
 
 # clean rule for target.
-Blink_Trigger/CMakeFiles/Blink_Trigger.dir/clean:
-	$(MAKE) $(MAKESILENT) -f Blink_Trigger\CMakeFiles\Blink_Trigger.dir\build.make Blink_Trigger/CMakeFiles/Blink_Trigger.dir/clean
-.PHONY : Blink_Trigger/CMakeFiles/Blink_Trigger.dir/clean
+Setup/CMakeFiles/Setup.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Setup\CMakeFiles\Setup.dir\build.make Setup/CMakeFiles/Setup.dir/clean
+.PHONY : Setup/CMakeFiles/Setup.dir/clean
+
+#=============================================================================
+# Target rules for target Timer/CMakeFiles/Timer.dir
+
+# All Build rule for target.
+Timer/CMakeFiles/Timer.dir/all:
+	$(MAKE) $(MAKESILENT) -f Timer\CMakeFiles\Timer.dir\build.make Timer/CMakeFiles/Timer.dir/depend
+	$(MAKE) $(MAKESILENT) -f Timer\CMakeFiles\Timer.dir\build.make Timer/CMakeFiles/Timer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Working\baremetal_stm\Debug\CMakeFiles --progress-num=14,15 "Built target Timer"
+.PHONY : Timer/CMakeFiles/Timer.dir/all
+
+# Build rule for subdir invocation for target.
+Timer/CMakeFiles/Timer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Working\baremetal_stm\Debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Timer/CMakeFiles/Timer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Working\baremetal_stm\Debug\CMakeFiles 0
+.PHONY : Timer/CMakeFiles/Timer.dir/rule
+
+# Convenience name for target.
+Timer: Timer/CMakeFiles/Timer.dir/rule
+.PHONY : Timer
+
+# clean rule for target.
+Timer/CMakeFiles/Timer.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Timer\CMakeFiles\Timer.dir\build.make Timer/CMakeFiles/Timer.dir/clean
+.PHONY : Timer/CMakeFiles/Timer.dir/clean
 
 #=============================================================================
 # Target rules for target GPIO_Setting/CMakeFiles/GPIO_Setting.dir

@@ -6,6 +6,9 @@
         "macro.h": "c",
         "inttypes.h": "c",
         "userdefine.h": "c",
-        "stdbool.h": "c"
+        "stdbool.h": "c",
+        "main.h": "c",
+        "gpio_func.h": "c",
+        "app_led.h": "c"
     }
 }

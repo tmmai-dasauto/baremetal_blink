@@ -1,6 +1,5 @@
 #include "main.h"
 
-uint8_t g_InitStatus = 0;
 
 static inline void spin(volatile uint32_t count) {
   while (count--) /*asm("nop")*/;
@@ -8,11 +7,10 @@ static inline void spin(volatile uint32_t count) {
 
 int main(void) {
   uint16_t led = PIN('C', 13);            // Blue LED  
-
-  SetupPin(led,GPIO_MODE_OUTPUT);
+  
   for (;;)
   {
-    BlinkLed(led);
+    App_LED(led);
   }
   
   return 0;
@@ -33,4 +31,4 @@ extern void _estack(void);  // Defined in link.ld
 
 // 16 standard and 86 STM32-specific handlers
 __attribute__((section(".vectors"))) void (*const tab[16 + 86])(void) = {
-    _estack, _reset};
+    _estack, _reset, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, SysTick_Handler};

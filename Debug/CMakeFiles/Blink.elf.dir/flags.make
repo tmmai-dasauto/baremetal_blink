@@ -4,7 +4,7 @@
 # compile C with C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc.exe
 C_DEFINES = 
 
-C_INCLUDES = -IC:\Working\baremetal_stm\App\Api\inc -IC:\Working\baremetal_stm\App\Wrapper\inc -IC:\Working\baremetal_stm\Lib\Shared -IC:\Working\baremetal_stm\Support\Device\stm32f411\Driver\RCC\inc -IC:\Working\baremetal_stm\Support\Device\stm32f411\Driver\GPIO\inc
+C_INCLUDES = -IC:\Working\baremetal_stm\App\Api\inc -IC:\Working\baremetal_stm\App\Wrapper\inc -IC:\Working\baremetal_stm\Lib\Shared -IC:\Working\baremetal_stm\Firmware\Timer\inc -IC:\Working\baremetal_stm\Support\Device\stm32f411\Driver\RCC\inc -IC:\Working\baremetal_stm\Support\Device\stm32f411\Driver\GPIO\inc
 
 C_FLAGS = -g -std=c99 -mcpu=cortex-m4 -fdata-sections -ffunction-sections -Wall -Og
 

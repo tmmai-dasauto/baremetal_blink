@@ -12,4 +12,5 @@ struct rcc {
       RESERVED6[2], SSCGR, PLLI2SCFGR;
 };
 
-extern void RCC_Enable(uint32_t pin);
+extern void RCC_AHB1_Enable(uint32_t pin);
+extern void RCC_AHB2_Enable(uint32_t pin);

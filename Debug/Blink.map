@@ -75,11 +75,15 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
  .data          0x00000000        0x0 CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
  .bss           0x00000000        0x0 CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
- .bss.g_InitStatus
-                0x00000000        0x1 CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
- .text          0x00000000        0x0 CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
- .data          0x00000000        0x0 CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
- .bss           0x00000000        0x0 CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
+ .text          0x00000000        0x0 CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+ .data          0x00000000        0x0 CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+ .text          0x00000000        0x0 CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
+ .data          0x00000000        0x0 CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
+ .text          0x00000000        0x0 CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj
+ .data          0x00000000        0x0 CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj
  .text          0x00000000        0x0 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
  .data          0x00000000        0x0 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
  .bss           0x00000000        0x0 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
@@ -117,10 +121,13 @@ LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../
 LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a
 LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libnosys.a
 LOAD CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
-LOAD CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
+LOAD CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+LOAD CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
+LOAD CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj
 LOAD CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
 LOAD CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
-LOAD Blink_Trigger\libBlink_Trigger.a
+LOAD Setup\libSetup.a
+LOAD Timer\libTimer.a
 LOAD GPIO_Setting\libGPIO_Setting.a
 LOAD RCC_Setting\libRCC_Setting.a
 START GROUP
@@ -147,74 +154,96 @@ LOAD c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/
  .vectors       0x08000000      0x198 CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
                 0x08000000                tab
 
-.text           0x08000198       0xfa
+.text           0x08000198      0x196
  *(.text*)
- .text.main     0x08000198       0x16 CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
+ .text.main     0x08000198        0xc CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
                 0x08000198                main
- *fill*         0x080001ae        0x2 
- .text._reset   0x080001b0       0x3c CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
-                0x080001b0                _reset
+ .text._reset   0x080001a4       0x3c CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
+                0x080001a4                _reset
  .text.BlinkLed
-                0x080001ec       0x30 CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
-                0x080001ec                BlinkLed
- .text.SetupPin
-                0x0800021c       0x14 CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
-                0x0800021c                SetupPin
- .text.RCC_Enable
-                0x08000230       0x14 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
-                0x08000230                RCC_Enable
+                0x080001e0       0x34 CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+                0x080001e0                BlinkLed
+ .text.App_LED  0x08000214       0x28 CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+                0x08000214                App_LED
+ .text.SetupGPIOPin
+                0x0800023c       0x14 CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
+                0x0800023c                SetupGPIOPin
+ .text.SetupTimer
+                0x08000250        0xe CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
+                0x08000250                SetupTimer
+ .text.systick_init
+                0x0800025e       0x18 CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj
+                0x0800025e                systick_init
+ *fill*         0x08000276        0x2 
+ .text.SysTick_Handler
+                0x08000278       0x10 CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj
+                0x08000278                SysTick_Handler
+ .text.timer_expired
+                0x08000288       0x30 CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj
+                0x08000288                timer_expired
+ .text.RCC_AHB1_Enable
+                0x080002b8       0x14 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
+                0x080002b8                RCC_AHB1_Enable
+ .text.RCC_AHB2_Enable
+                0x080002cc       0x14 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
+                0x080002cc                RCC_AHB2_Enable
  .text.gpio_set_mode
-                0x08000244       0x2e CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
-                0x08000244                gpio_set_mode
+                0x080002e0       0x2e CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
+                0x080002e0                gpio_set_mode
  .text.gpio_write
-                0x08000272       0x20 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
-                0x08000272                gpio_write
+                0x0800030e       0x20 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
+                0x0800030e                gpio_write
 
-.glue_7         0x08000294        0x0
- .glue_7        0x08000294        0x0 linker stubs
+.glue_7         0x08000330        0x0
+ .glue_7        0x08000330        0x0 linker stubs
 
-.glue_7t        0x08000294        0x0
- .glue_7t       0x08000294        0x0 linker stubs
+.glue_7t        0x08000330        0x0
+ .glue_7t       0x08000330        0x0 linker stubs
 
-.vfp11_veneer   0x08000294        0x0
- .vfp11_veneer  0x08000294        0x0 linker stubs
+.vfp11_veneer   0x08000330        0x0
+ .vfp11_veneer  0x08000330        0x0 linker stubs
 
-.v4_bx          0x08000294        0x0
- .v4_bx         0x08000294        0x0 linker stubs
+.v4_bx          0x08000330        0x0
+ .v4_bx         0x08000330        0x0 linker stubs
 
-.init           0x08000294        0x4
- .init          0x08000294        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
-                0x08000294                _init
+.init           0x08000330        0x4
+ .init          0x08000330        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+                0x08000330                _init
 
-.fini           0x08000298        0x4
- .fini          0x08000298        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
-                0x08000298                _fini
+.fini           0x08000334        0x4
+ .fini          0x08000334        0x4 c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m/nofp/crti.o
+                0x08000334                _fini
 
-.iplt           0x0800029c        0x0
- .iplt          0x0800029c        0x0 CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
+.iplt           0x08000338        0x0
+ .iplt          0x08000338        0x0 CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
 
-.rel.dyn        0x0800029c        0x0
- .rel.iplt      0x0800029c        0x0 CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
+.rel.dyn        0x08000338        0x0
+ .rel.iplt      0x08000338        0x0 CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
 
 .rodata
  *(.rodata*)
 
-.data           0x20000000        0x0 load address 0x0800029c
+.data           0x20000000        0x1 load address 0x08000338
                 0x20000000                _sdata = .
  *(.first_data)
  *(.data SORT_BY_NAME(.data.*))
-                0x20000000                _edata = .
-                0x0800029c                _sidata = LOADADDR (.data)
+ .data.state.0  0x20000000        0x1 CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+                0x20000001                _edata = .
+                0x08000338                _sidata = LOADADDR (.data)
 
-.igot.plt       0x20000000        0x0 load address 0x0800029c
- .igot.plt      0x20000000        0x0 CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
+.igot.plt       0x20000004        0x0 load address 0x08000339
+ .igot.plt      0x20000004        0x0 CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
 
-.bss            0x20000000        0x0 load address 0x0800029c
-                0x20000000                _sbss = .
+.bss            0x20000004        0x5 load address 0x08000339
+                0x20000004                _sbss = .
  *(.bss SORT_BY_NAME(.bss.*) COMMON)
-                0x20000000                _ebss = .
-                0x20000000                . = ALIGN (0x8)
-                0x20000000                _end = .
+ .bss.gs_ticks  0x20000004        0x4 CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+                0x20000004                gs_ticks
+ .bss.l_AppLED_Init.1
+                0x20000008        0x1 CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+                0x20000009                _ebss = .
+                0x20000010                . = ALIGN (0x8)
+                0x20000010                _end = .
 OUTPUT(Blink.elf elf32-littlearm)
 LOAD linker stubs
 
@@ -225,83 +254,116 @@ LOAD linker stubs
  .ARM.attributes
                 0x0000001e       0x2e CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
  .ARM.attributes
-                0x0000004c       0x2e CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
+                0x0000004c       0x2e CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
  .ARM.attributes
-                0x0000007a       0x2e CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
+                0x0000007a       0x2e CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
  .ARM.attributes
-                0x000000a8       0x2e CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
+                0x000000a8       0x2e CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj
+ .ARM.attributes
+                0x000000d6       0x2e CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
+ .ARM.attributes
+                0x00000104       0x2e CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
 
 .comment        0x00000000       0x49
  .comment       0x00000000       0x49 CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
                                  0x4a (size before relaxing)
- .comment       0x00000049       0x4a CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
+ .comment       0x00000049       0x4a CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+ .comment       0x00000049       0x4a CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
+ .comment       0x00000049       0x4a CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj
  .comment       0x00000049       0x4a CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
  .comment       0x00000049       0x4a CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
 
-.debug_info     0x00000000      0x89a
- .debug_info    0x00000000      0x236 CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
- .debug_info    0x00000236      0x207 CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
- .debug_info    0x0000043d      0x258 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
- .debug_info    0x00000695      0x205 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
+.debug_info     0x00000000      0xb4a
+ .debug_info    0x00000000      0x1b5 CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
+ .debug_info    0x000001b5      0x208 CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+ .debug_info    0x000003bd      0x19c CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
+ .debug_info    0x00000559      0x16f CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj
+ .debug_info    0x000006c8      0x27d CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
+ .debug_info    0x00000945      0x205 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
 
-.debug_abbrev   0x00000000      0x43b
- .debug_abbrev  0x00000000      0x162 CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
- .debug_abbrev  0x00000162      0x101 CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
- .debug_abbrev  0x00000263       0xb3 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
- .debug_abbrev  0x00000316      0x125 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
+.debug_abbrev   0x00000000      0x5eb
+ .debug_abbrev  0x00000000      0x128 CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
+ .debug_abbrev  0x00000128      0x101 CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+ .debug_abbrev  0x00000229       0xb4 CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
+ .debug_abbrev  0x000002dd      0x109 CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj
+ .debug_abbrev  0x000003e6       0xe0 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
+ .debug_abbrev  0x000004c6      0x125 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
 
-.debug_loc      0x00000000      0x21c
+.debug_loc      0x00000000      0x2f7
  .debug_loc     0x00000000       0x93 CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
- .debug_loc     0x00000093       0xa3 CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
- .debug_loc     0x00000136       0x25 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
- .debug_loc     0x0000015b       0xc1 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
+ .debug_loc     0x00000093       0x67 CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+ .debug_loc     0x000000fa       0x6f CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
+ .debug_loc     0x00000169       0xa8 CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj
+ .debug_loc     0x00000211       0x25 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
+ .debug_loc     0x00000236       0xc1 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
 
-.debug_aranges  0x00000000       0x98
+.debug_aranges  0x00000000       0xf8
  .debug_aranges
                 0x00000000       0x28 CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
  .debug_aranges
-                0x00000028       0x28 CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
+                0x00000028       0x28 CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
  .debug_aranges
-                0x00000050       0x20 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
+                0x00000050       0x28 CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
  .debug_aranges
-                0x00000070       0x28 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
+                0x00000078       0x30 CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj
+ .debug_aranges
+                0x000000a8       0x28 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
+ .debug_aranges
+                0x000000d0       0x28 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
 
-.debug_ranges   0x00000000       0x58
+.debug_ranges   0x00000000       0x98
  .debug_ranges  0x00000000       0x18 CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
- .debug_ranges  0x00000018       0x18 CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
- .debug_ranges  0x00000030       0x10 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
- .debug_ranges  0x00000040       0x18 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
+ .debug_ranges  0x00000018       0x18 CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+ .debug_ranges  0x00000030       0x18 CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
+ .debug_ranges  0x00000048       0x20 CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj
+ .debug_ranges  0x00000068       0x18 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
+ .debug_ranges  0x00000080       0x18 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
 
-.debug_line     0x00000000      0x756
- .debug_line    0x00000000      0x21e CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
- .debug_line    0x0000021e      0x1f1 CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
- .debug_line    0x0000040f      0x16c CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
- .debug_line    0x0000057b      0x1db CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
+.debug_line     0x00000000      0xb7d
+ .debug_line    0x00000000      0x1b5 CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
+ .debug_line    0x000001b5      0x23f CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+ .debug_line    0x000003f4      0x1f4 CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
+ .debug_line    0x000005e8      0x22f CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj
+ .debug_line    0x00000817      0x18b CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
+ .debug_line    0x000009a2      0x1db CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
 
-.debug_str      0x00000000      0x3e7
- .debug_str     0x00000000      0x1cb CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
-                                0x210 (size before relaxing)
- .debug_str     0x000001cb       0x6b CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
-                                0x1e3 (size before relaxing)
- .debug_str     0x00000236      0x132 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
-                                0x288 (size before relaxing)
- .debug_str     0x00000368       0x7f CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
+.debug_str      0x00000000      0x4c4
+ .debug_str     0x00000000      0x16b CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
+                                0x1a8 (size before relaxing)
+ .debug_str     0x0000016b       0xe0 CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+                                0x23f (size before relaxing)
+ .debug_str     0x0000024b       0x6c CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
+                                0x1fb (size before relaxing)
+ .debug_str     0x000002b7       0x5c CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj
+                                0x1de (size before relaxing)
+ .debug_str     0x00000313      0x132 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
+                                0x29d (size before relaxing)
+ .debug_str     0x00000445       0x7f CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
                                 0x209 (size before relaxing)
 
-.debug_frame    0x00000000       0xcc
+.debug_frame    0x00000000      0x168
  .debug_frame   0x00000000       0x38 CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
- .debug_frame   0x00000038       0x44 CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
- .debug_frame   0x0000007c       0x20 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
- .debug_frame   0x0000009c       0x30 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
+ .debug_frame   0x00000038       0x4c CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+ .debug_frame   0x00000084       0x44 CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
+ .debug_frame   0x000000c8       0x40 CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj
+ .debug_frame   0x00000108       0x30 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
+ .debug_frame   0x00000138       0x30 CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
 
 Cross Reference Table
 
 Symbol                                            File
-BlinkLed                                          CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
+App_LED                                           CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
                                                   CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
-RCC_Enable                                        CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
-                                                  CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
-SetupPin                                          CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
+BlinkLed                                          CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+RCC_AHB1_Enable                                   CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
+                                                  CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
+RCC_AHB2_Enable                                   CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/RCC/src/RCC.c.obj
+                                                  CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
+SetupGPIOPin                                      CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
+                                                  CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+SetupTimer                                        CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
+                                                  CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+SysTick_Handler                                   CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj
                                                   CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
 __bss_end__                                       c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
 __bss_start__                                     c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
@@ -341,15 +403,20 @@ _start                                            c:/progra~2/gnuarm~1/102021~1.
 atexit                                            c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
 exit                                              c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a(lib_a-exit.o)
                                                   c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
-g_InitStatus                                      CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
 gpio_set_mode                                     CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
-                                                  CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
+                                                  CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
 gpio_write                                        CMakeFiles/Blink.elf.dir/Support/Device/stm32f411/Driver/GPIO/src/GPIO_Func.c.obj
-                                                  CMakeFiles/Blink.elf.dir/App/Wrapper/src/Blink.c.obj
+                                                  CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+gs_ticks                                          CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
+                                                  CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj
 hardware_init_hook                                c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
 main                                              CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
                                                   c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
 memset                                            c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc_nano.a(lib_a-memset.o)
                                                   c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
 software_init_hook                                c:/progra~2/gnuarm~1/102021~1.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/crt0.o
+systick_init                                      CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj
+                                                  CMakeFiles/Blink.elf.dir/App/Wrapper/src/Setup.c.obj
 tab                                               CMakeFiles/Blink.elf.dir/App/Api/src/main.c.obj
+timer_expired                                     CMakeFiles/Blink.elf.dir/Firmware/Timer/src/Timer.c.obj
+                                                  CMakeFiles/Blink.elf.dir/App/Api/src/App_LED.c.obj
