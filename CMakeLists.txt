@@ -36,11 +36,12 @@ target_include_directories(${EXECUTABLE} PUBLIC
                         )
 
 target_compile_options(${EXECUTABLE} PRIVATE
-        -mcpu=cortex-m4
+        -mcpu=cortex-m4 #auto detection? => define by user for each device
         # -mthumb
         # -mfpu=fpv4-sp-d16
         # -mfloat-abi=hard
 
+        #add -o
         -fdata-sections
         -ffunction-sections
 
